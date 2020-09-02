@@ -79,6 +79,62 @@
 					Prof. Dr. Stefan LANG <br>
 					Prepared for the GEOBIA Summer School - OBIA for the operational Copernicus service challenge
 				<!-- AUTHORS: PUT YOUR PRESENTER NOTES HERE: -->
+				
+<!--____________________________________________________________________________________________________________________________-->		
+				
+				<!-- Bilder geichzeitig mit einem Klick, einfach 2x mit data-fragment-index-index 0
+				<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" />
+				<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" />
+				-->
+				
+				<!-- Bilder nacheinander mit jeweils einem Klick,  mit data-fragment-index aufsteigend
+					Es scheint, als ob Reveal automatisch die "richtige position" nimmt. Bei vier bildern die nacheinander geladen werden, zentriert es automatisch die Bilder nebeneinander. Bei größeren Bildern untereinander. 
+				<img class="fragment fade-in" data-fragment-index="0" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="75" height="75" />
+				<img class="fragment fade-in" data-fragment-index="1" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="75" height="75" />
+				<img class="fragment fade-in" data-fragment-index="2" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="75" height="75" />
+				<img class="fragment fade-in" data-fragment-index="3" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="75" height="75" />
+				-->
+				
+				
+				<!-- Die class r-stack macht in diesem fall tatsächlich genau das gleiche wie die einzelne definierung der bilder als fragments, da die classes nur als "fragment" definiert sind und nicht noch mal eigene animationen zugewiesen bekommen haben. Angeblich sollten die Bilder uebereinander erscheinen, aber vlt. wird das durch eine vordefinierte variabel in dieser Praesentation verhindert? Tipp: style="float: right" kann benutzt werden, um statt links rechts anzufangen.-->
+				<!--
+				<div class="r-stack">
+					<img class="fragment" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300">
+					<img class="fragment" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300">
+					<img class="fragment" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300">
+				</div>
+				-->
+				
+				
+				<!-- Den einzlnen fragments innerhalb des stacks kann man nun noch eigene Animationen zuweisen und den zeitpunkt, an denen diese geschehen. Ein bisschen wie bei Powerpoint im Animationns menu. class="fragment fade-in-then-out" zB lässt das Bild beim nächsten Klick verschwinden-->
+				<!-- 
+				<div class="r-stack">
+					<img class="fragment fade-in-then-out" data-fragment-index="0" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300" style="float: right" data-fragment-index="0">
+					<img class="fragment fade-in-then-out" data-fragment-index="1" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300" style="float: right" data-fragment-index="1">
+					<img class="fragment fade-in" class="fragment grow" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" width="300" height="300" data-fragment-index="2">
+
+				</div>
+				-->
+				<!-- Hier meine einzige Lösung für sich überlappende Bilder: Position im div schon festlegen, relative führt dazu dass reveal sich die position des div aussucht. Dann innerhalb der img die position als absolut definieren und verschieben. Irgendwie nimmt er aber die data fragment index anweisungen nicht...-->
+				<!--
+				<div style="position:relative; width:150px; height:150px; margin:0 auto;">
+					<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" style="position:absolute;top:0;left:0;" data-fragment-index="0"/>
+					<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="https://www.donike.net/wp-content/uploads/2020/05/Portrait_Low-ConvertImage-150x150.png" style="position:absolute;top:5;left:5;" data-fragment-index="1"/>
+				</div>
+				-->
+				
+<!--____________________________________________________________________________________________________________________________-->			
+				
+				<!--
+				<div class="r-stack">
+					<img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
+					<img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
+					<img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+				</div>
+				-->
+				
+				
+
 				<aside class="notes">
 					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
 				</aside>
