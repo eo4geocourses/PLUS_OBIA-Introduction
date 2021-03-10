@@ -43,7 +43,7 @@
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
 		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
-		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme"-->  <!-- anthrazit background design --> 
 		<!-- EO4GEO FONT ROBOTO SLAB -->
 		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
 		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
@@ -204,10 +204,512 @@
 				
 				</section>
 					
+				<section id="SpatialImageAnalysis">
+					<section>
+						<h2>Spatial Image Analysis </h2>
+						<strong> Extended set of target classes: </strong>
+						<li style> Geometrically defined classes </li>
+						<li style> Composite classes / objects </li>
+						
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/12_0_spatialImageAnalysis.png" alt="spatialImageAnalysis" />
+						</div>
+					</section>	
 				
+					<section>
+						<h2>Spatial Image Analysis </h2>
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/13_0_Chiemsee.png" alt="Chiemsee" />
+						</div>
+					</section>
+				
+					<section>
+						<h2>Spatial Image Analysis </h2>
+						Spatial (i.e. geometrical, textural and contextual) aspects that can be addressed, even on grey-scale image
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/14_0_spatialAspects.png" alt="spatialAspects" />
+						</div>
+					</section>
+				</section>
+				
+				
+					<section>
+					<h2>Regions</h2>
+					<div class="ppt-txt" style="position: absolute; top: 100px; left: 10px; height: 150px;  width: 400px">
+					<p>
+						<ul>
+						<li style> <strong>Region</strong> = a spatially contiguous area with common attributes or uniform behaviour (internal <strong>‘homogeneity’</strong>) </li> <br>
+						<li style> <strong>Regionalisation = spatial classification</strong>, i.e. classification under <strong>spatial constraints</strong> (contiguity of an attribute in space) </li> <br>
+						<li style> Why does it work? Principle of <strong>spatial auto-correlation</strong> (“1st law of Geography”, W Tobler, 1970)</li>
+						</ul> <p>
+					</div>
+					<div class="r-stack" style="position:relative; top: 50px; left: 240px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/15_0_regions.png" alt="Regions" />
+						</div>
+					</section>
+				
+				<section id="ImageObjects">
+					<section>
+					<h2>Image Objects </h2>
+					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/16_0_imageObjects.png" alt="imageObjects" />
+						</div>
+					</section>
 					
+					<section>
+					<h2>Image Objects </h2>
 					
+					<table>
+						<tr><td width="50%"><image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/17_0_ImageObjects.png" alt="image_objects.png" align=left> </td>
+						<td> <image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/17_1_ImageObjects.png" alt="image_objects.png" align=left> </td>
+						</tr>
+					</table>
+					</section>
+				</section>
+				
+				<section>
+					<h2>What means homogeneous?</h2>
+						<div class="ppt-txt" style="position: absolute; top: 100px; left: 10px; height: 150px;  width: 500px">
+						<p> <i> not a trivial task... </i>
+						<ul>
+						<li style> Challenges in generating regions </li> <br>
+						They need to be spatially coherent <br>
+						They do not exist a priori <br><br>
+						<li style> Defining Homogeneity criterion <strong>H</strong> </li> <br>
+						Variance* of pixels within a region<br>
+						Spectral distance (SD) of pixels <br>
+						Vectors in n-dimensional feature space<br>
+						</ul> <br><br>
+						<font size=-1>*as one (statistical) measure to operationalize homogeneity </font> <p>
+					</div>
+					<div class="r-stack" style="position:relative; top: 20px; left: 250px; width:1050px; height:450px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/18_0_homogeneity.png" alt="Regions" />		
+						</div>
+						</section>
+				</section>
+				
+				<section id="Spectral Segmentation">
+					<section>
+					<h2>Spectral Segmentation</h2>
+					<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 10px; height: 150px;  width: 400px">
+					<p> Which image objects are we able to perceive?
+						<ul>
+							<li> From 252 digital numbers (14 x 18 image matrix) to ‘Abraham Lincoln’ (one individual person) </li>  
+						</ul> <p>
+						What do images evoke in our visual context and our brain?
+							<li> Trying to ignore pixels, to identify familiar structures </li> 
+							<li> Object hierarchy (here: exactly 2) </li> 
+							<li> Semantic enrichment </li> 
+							<li> Combination of experience and knowledge </li>
+						</ul> <p>
+					</div>
+					<div class="r-stack" style="position:relative; top: 50px; left: 240px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/19_0_segmentation.png" alt="Regions" />
+						</div>
+					</section>
 					
+					<section>
+					<h2>Spectral Segmentation </h2>
+					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/20_0_segmentation.png" alt="imageObjects" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Multispectral Segmentation </h2>
+					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/21_0_segmentation.png" alt="imageObjects" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Segmentation Challenges </h2>
+					<strong>Conceptual boundaries in images </strong> <br>
+					Fiat boundaries, according to convention, expertise, etc. <br>
+ 					--> See lesson “Class modelling”
+
+					<table>
+						<tr><td width="50%"><image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/22_0_segmentationChallenges.png" alt="image_challenges.png" align=left> </td>
+						<td> <image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/22_1_segmentationChallenges.png" alt="image_challenges.png" align=left> </td>
+						</tr>
+					</table>
+					</section>
+				
+				<section>
+					<h2>Segmentation Challenges </h2>
+					<strong>Conceptual boundaries in images </strong> <br>
+					Complex classes, often defined by spectrally heterogeneous, but functionally homogenous units
+					Segmentation rarely provides these units directly 
+					Cyclic approach needed (class modelling)
+					Expert-based (object validity) 
+
+					<table>
+						<tr><td width="50%"><image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/23_0_segmentationChallenges.png" alt="image_challenges.png" align=left> </td>
+						<td> <image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/23_1_segmentationChallenges.png" alt="image_challenges.png" align=left> </td>
+						</tr>
+					</table>
+					<font size=1>Semi-automatically delineated complex biotope types. Left: open orchard meadows; Right: mixed arable land and grassland area </font>
+					</section>
+					
+					<section>
+					<h2>Image Segmentation</h2>
+					<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 10px; height: 150px;  width: 400px">
+					<p> <strong> Local pixel neighborhood </strong>
+						<ul>
+							<li> Spatial autocorrelation among pixels </li> 
+							<li> neighbouring pixels tend to have similar values </li> 
+							<li> But not everywhere! </li>
+						</ul> <p>
+						</div>
+						<div class="r-stack" style="position:relative; top: 50px; left: 240px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/25_0_segmentation.png" alt="Regions" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Segmentation and classification</h2>
+					<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 750px">
+					<p> <strong> Two interrelated methodological pillars (Lang 2008) </strong> <br><br>
+					(1) segmentation / regionalisation for nested, scaled representations ('object scape')
+						<ul>
+							<li> Segmentation of different types of continuous data </li> 
+							<li> Optimizing segmentation (algorithms and parameterization) in terms of usability, theoretical foundation, etc. </li> 
+							<li> Systematic comparison of segmentation results </li>
+						</ul> <p>
+					(2) rule-based classifiers based on spectral and geometrical properties as well as spatial relationships
+					<ul>
+							<li> Ontology driven classification, advanced sets of target classes </li> 
+							<li> Process of OBIA not necessarily sequential (i.e. as described here), rather sequential, iterative (class modelling) </li> 
+							<li> Smooth transition to methods to further characterise and analyse classification results (e.g. landscape metrics) </li>
+						</ul> <p>
+						</div>
+						<div class="r-stack" style="position:relative; top: 50px; left: 450px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/26_0_segmentationclassification.png" alt="segmentation_classification" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Multi-scale segmentation</h2>
+					<div class="ppt-txt" style="position: absolute; text-align: center; top: 100px; height: 150px; width: 400">
+					<p> Segmentation in several <strong>hierarchical </strong> scales <br><br>
+					scale-specific vs. scale-adapted segmentation
+						</div>
+						<div class="r-stack" style="position:relative; top: 150px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/27_0_multiscalesegmentation.png" alt="multiscale_segmentation" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Multi-scale segmentation</h2>
+					<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 10px; height: 150px;  width: 400px"><br>
+					<p style = "text-align: left"> Representations in various nested levels <br>
+					Each object 'knows' its neighbours and hierarchical level
+						</div>
+						<div class="r-stack" style="position:relative; top: 50px; left: 240px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/28_0_multiscalesegmentation.png" alt="multiscale_segmentation" />
+						</div>
+					</section>
+					
+					<section>
+					<h2>Multi-scale segmentation </h2>
+					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/29_0_multiscalesegmentation.png" alt="multiscale_segmentation" />
+						</div>
+					</section>
+					
+				</section>
+				
+				<section>
+					<h2>Fuzzy (rule) set</h2>
+					<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+					<p> We all have a concept of  “cold”, “warm”, “hot” <br><br>
+						<ul>
+							<li> We discretise a gradual phenomenon by categorizing it  </li> 
+							<li> Boundaries between these concepts are not crisp </li> 
+							<li> The category becomes more stable with increasing ‘distance’ from boundaries </li>
+							<li> Fuzzy sets: a way to model / operationalise vague knowledge </li> 
+						</ul> <p>
+						</div>
+						<div class="r-stack" style="position:relative; top: 50px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/30_0_fuzzysets.png" alt="fuzzy_rule_sets" />
+						</div>
+				</section>
+
+				<section id="knowledge">
+					<section>
+						<h2>Why knowledge representation?</h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> We all have a concept of  “cold”, “warm”, “hot” <br><br>
+							<ul>
+								<li> In remote sensing and image analysis a lot of expert knowledge exists </li> 
+								<li> Such knowledge is implicit or explicit </li> 
+								<li> The latter can be formalised and encoded in rules  </li>
+							</ul> <p> <br>
+							(e.g. NDVI > 0.2 => vegetation) 
+
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/31_0_knowledgerepresentation.png" alt="knowledge_representation" />
+							</div>
+					</section>
+					
+					<section>
+						<h2>What type of knowledge can be used? </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> Knowledge in image interpretation <br><br>
+							<ul>
+								<li> Implicit visual skills are complemented by explicit knowledge  </li> 
+								<li> enriched by experience and training </li> 
+							</ul>
+							<p><strong> Structural</strong> knowledge 
+								<li> how concepts within a domain are interrelated  </li>
+								<li> links between image objects and real-world geographical features  </li>
+							</ul> <p> 
+							<p><strong>Procedural </strong> knowledge
+							<li> specific computational functions, algorithms </li>
+							<li> Encoding of structural knowledge, e.g. by a set of rules … or by a set of representative samples </li>
+							<br>
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/32_0_knowledge.png" alt="knowledge_representation" />
+							</div>
+					</section>
+				</section>
+
+				<section>
+						<h2>Facts we can take for granted... </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> 
+							<ul>
+								<li> Physical laws and principles <i>(e.g. Stefan Boltzmann‘s Law </i>: The hotter a body, the more energy is emitted; 
+								<i>Wien‘s Displacement Law</i>: The hotter a body, the shorter the wavelength of the maximum radiation) </li> 
+								<li> Different land surface types show specific spectral profiles </li>
+								<li> ... </li>
+								<li> Spatial autocorrelation </li>
+								<li> ... </li>
+								</ul>
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/33_0_facts.png" alt="others" />
+							</div>
+				</section>	
+
+				<section>
+						<h2>Others we know from experience... </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 520px">
+						<p> Example <br><br>
+							<ul>
+								<li> Grassland appears “red” in a false-colour band combination </li> 
+								<li> A football field is a special kind of grassland but has a certain size and shape. </li>
+								<li> How does a football field look like on Sentinel-2? </li>
+								</ul>
+							<ul><p>Heuristics are encoded in a <strong> set of rules</strong> <br>
+							Rules can address all kinds of features:							
+								<li> Object features (color, shape, size, etc.)  </li>
+								<li> Object-to-neighbour relationships  </li>
+								<li> Hierarchical relationships>
+							</ul> <p> 
+							</div>
+							<div class="r-stack" style="position:relative; top: 50px; left: 320px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/34_0_others.png" alt="others" />
+							</div>
+					</section>	
+				
+				<section>
+						<h2>Class hierarchy (in eCognition) </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> Classes are embedded in a hierarchical heritage scheme <br>
+						(1) Feature-based inheritance<br>
+							<ul>
+								<li> child classes inherit all descriptive features from their parent classes </li> 
+								<li> Not confined to spectral values </li>
+								</ul>
+							<p>(2) Semantic inheritance <br>
+								<ul>
+								<li> Classes can be grouped semantically  </li>
+								<li> Belong to the same logical parent class  </li>
+								<li> Semantic inheritance may turn into feature-based when additional explicit information is provided </li>
+							</ul> <p> 
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/35_0_classhierarchy.png" alt="class_hierarchy" />
+							</div>
+					</section>
+				
+					<section>
+						<h2>What is semantic querying? </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> Example: <i>Monitoring of water quality in swimming lakes over three seasons </i><br>
+						Image search criteria: [(0) sensor type], (1) <strong> time window </strong>, (2) <strong> geographical focus </strong> (AOI), 
+						(3) <strong> cloud cover </strong>, (4) <strong> thematic focus </strong>, (5) <strong>monitoring period</strong>.<br>
+							<ul>
+								<li> Use standard metadata (location) and cloud mask </li> 
+								<li> <strong>Thematic </strong> focus: requires a fundamental (i.e. low level semantic) concept of the existence and representation of (swimming) lakes.  </li>
+								<li> Temporal aspect: (constancy or change) implies the notion for changes in critical indicators, e.g. by indices in IR reflectance recorded by multi-temporal imagery  </li>
+							</ul> <p> 
+							</div>
+							<div class="r-stack" style="position:relative; top: 50px; left: 300px; width:800px; height:420px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/36_0_semanticquerying.png" alt="class_hierarchy" />
+							</div>
+					</section>
+				
+					<section>
+						<h2>Data to information </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> How to measure the information in an image?<br>
+							<ul>
+								<li> <strong>Histogram</strong> (distribution of values)</li> 
+								<li> Distribution of colours / colour levels </li>
+								<li> Image <strong>content</strong> (based on classification) </li>
+							</ul> <p> 
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:600px; height:305px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/37_0_histogram.png" alt="histogram" />
+							</div>
+					</section>
+				
+					<section>
+						<h2>Data to information </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> Information measurement requires information <strong>units</strong><br> (bins, classified pixels, objects, etc.)<br>
+							</div>
+							<div class="r-stack" style="position:relative; top: 20px; left: 300px; width:800px; height:405px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/38_0_information.png" alt="information" />
+							</div>
+					</section>
+				
+					<section>
+						<h2>Data to information </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 30px;  width: 500px">
+						<p> Information measures <strong>(composition)</strong><br> <br>
+							<ul>
+								<li> Key elements: number and percentages of classes</li> 
+								<li> Indices: <i>Diversity H, Dominance, Evenness</i> </li>
+								<li> Image <strong>content</strong> (based on classification) </li>
+							</ul> <p> 
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/39_0_formula.png" alt="information" />
+							<i>where P = percentage, i = class 1 … i</i>
+							</div>
+						
+							<div class="r-stack" style="position:relative; top: 20px; left: 300px; width:900px; height:505px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/39_1_information.png" alt="information" />
+							</div>
+					</section>
+				
+				<section>
+						<h2>Knowledge organising systems (KOS) </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 450px">
+						<p> Structural knowledge can be organized in knowledge organizing systems (KOS) <br>
+							<ul>
+								<li> Realised as graphic notations such as semantic nets or frames </li> 
+								<li> Semantic knowledge representation  </li>
+								<li> using inheritance concept, e.g. <i>‘is part of’, ‘is more specific than’, ‘is an instance of’ </i> </li>
+								</ul>
+							<p>Semantic net <br>
+								<ul>
+								<li> Control over existing connections, once established  </li>
+								<li> Transparency and operability  </li>
+							</ul> <p> 
+							</div>
+							<div class="r-stack" style="position:relative; top: 70px; left: 300px; width:600px; height:300px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/40_0_KOS.png" alt="KOS" />
+							</div>
+					</section>
+					
+					<section>
+					<h2>Classification schemes </h2>
+					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/41_0_classificationschemes.png" alt="classification_schemes" />
+						</div>
+					</section>
+					
+					<section>
+						<h2>Classification schemes / taxonomies </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 450px">
+						<br><p> Corine Land Cover (CLC) <br>
+							<ul>
+								<li> Standard EU mapping scheme (used by European Environmental Agency EEA) initiated in 1985 (reference year 1990) </li> 
+								<li> Updates produced in 2000 and 2006, with the latest 2012 update under production  </li>
+								</ul>
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:900px; height:450px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/42_0_classificationschemes.png" alt="classification_schemes" />
+							</div>
+					</section>
+					
+					<section>
+						<h2>Classification schemes </h2>
+							<div class="r-stack" style="position:relative; top: 30px; left: 0px; width:900px; height:450px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/43_0_classificationschemes.png" alt="classification_schemes" />
+							</div><br>
+							CLC consists of an inventory of 44 classes. It uses a Minimum Mapping Unit (MMU) of 25 ha for areal phenomena and a minimum width of 100 m for linear phenomena
+					</section>
+					
+					<section>
+						<h2>Classification schemes </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 550px">
+						<br><p> Land Cover Classification System (FAO-LCCS) <br>
+							<ul>
+								<li> capable to record any land cover type, independent of specific applications and/or geographical areas </li> 
+								<li> overcome problems associated with the interpretation of different land cover class definitions (Mucher et al. 2014)  </li>
+								<li> uses a set of independent diagnostic criteria strictly based on vegetation physiognomy and structure rather than establishing land cover classes based on terminology (Kosmidou et al. 2014) </li>
+								<li> comprehensive land cover characterization, regardless of mapping scale, data collection method or geographic location. </li>
+								</ul>
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:400px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/44_0_clc.png" alt="classification_schemes" />
+							</div>
+					</section>
+					
+					<section>
+						<h2>Classification schemes </h2>
+							<div class="r-stack" style="position:relative; top: 30px; left: 0px; width:1000px; height:550px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/45_0_classificationschemes.png" alt="classification_schemes" />
+							</div><br>
+					</section>
+					
+					<section>
+						<h2>Spectral libraries </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
+						<p> <br>Spectral libraries represent spectral reflectance and physical properties of different land cover types <br>
+							</div>
+							<div class="r-stack" style="position:relative; top: 20px; left: 300px; width:600px; height:350px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/46_0_spectrallibraries.png" alt="spectral_libraries" />
+							<i>Very much simplified model!</i>
+
+							</div>
+					</section>
+				
+				
+				<section id="compositeobjects">
+				
+					<section>
+						<h2>Composite objects</h2>
+							<div class="r-stack" style="position:relative; top: 30px; left: 0px; width:1000px; height:550px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/47_0_compositeobjects.png" alt="composite_objects" />
+							</div><br>
+					</section>
+					
+					<section>
+						<h2>Composite objects </h2>
+						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 550px">
+						<br><p> Level of landscape elements <br>
+							<ul>
+								<li> Spectrally homogenous, correspond to agricultural fields, road segments, blocks of houses etc. </li> 
+								</ul>
+							Composite objects
+							<ul>
+							<li> Contain elements (building blocks)</li>
+								<li> Are spectrally heterogeneous, but functionally homogenous </li>
+								<li> Geons (Lang et al. 2014)</li>	
+							</div>
+							<div class="r-stack" style="position:relative; top: 30px; left: 300px; width:800px; height:400px; margin:0 auto;" >
+							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/48_0_compositeobjects.png" alt="composite_objects" />
+							</div>
+						</section>	
+					
+				</section>	
+				
 				<!--AUTHORS: Integration of Jupyter Notebooks from VITO-Platform - user authentification not solved yet -->
 				<!--section class="scrollable"> 
 					 <iframe src="https://notebooks.vgt.vito.be/user/emissoni/lab/tree/PLUS_Test.ipynb" width="1481" height="1280" frameborder="0" allowfullscreen="allowfullscreen"></iframe></script>
@@ -216,7 +718,7 @@
 					
 			
 				
-				<section> 
+			<section> 
 				<h2> Reference list </h2>
 				<br>
 				<reference_list>exemplary doi:<br><br>
@@ -224,7 +726,7 @@
 				<br>
 				<a href="https://doi.org/10.1080/17538947.2017.1379154">10.1080/17538947.2017.1379154</a>
 				</reference_list>
-				</section>
+			</section>
 				
 				
 			<section>Slide show ends</section>
