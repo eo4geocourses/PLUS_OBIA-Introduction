@@ -66,32 +66,6 @@
 				 <div  class = "presentation_title" style=" text-align: center " >OBIA - An Introduction</div>	<!--The title of the presentation appears on each slide-->
 				 
 
-			<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) >
-				@prefix dc: <http://purl.org/dc/terms/>.
-				@prefix eo4geo: <http://bok.eo4geo.eu/>.
-				<>  	dc:title "Object-based Image Analysis - An Introduction";
-					dc:creator "Stefan Lang, University of Salzburg";
-					dc:subject "OBIA, image segmentation, EO4GEO, Earth Observation";
-					dc:abstract "These slides provide an introduction to concepts and methods of Object-based image analysis. The slides have been prepared for and used in the virtual GEOBIA summer school in 2020. ";
-					dc:tableOfContents "(1) What is EO?; (2) Benefits of Copernicus; - to be updated";
-					dc:description "Learning outcomes: ;";
-					dc:contributor "Eva Missoni, Barbara Hofer, Simon Donike";
-					dc:created "2020-08-27";
-					dc:type "InteractiveResource";
-					dc:format "html";
-					dc:language "EN"; 
-					dc:SizeOrDuration "45min"
-					dc:audience "professionals, students";
-					dc:educationLevel "EQF 6";
-					dc:source "GEOBIA Summer School Material";
-					dc:rightsHolder "Stefan Lang, University of Salzburg";
-					dc:license "CC BY-SA 4.0";
-					dc:relation eo4geo:IP3-7;
-					dc:relation eo4geo:IP3;
-					dc:relation eo4geo:IP3-5 .	
-								-->
-
-
 				<div class="slides">
 				
 			
@@ -114,7 +88,7 @@
 				<section id="Intro">
 					<section> 
 						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/02_0_space.png" alt="space">	
-						<small> <a href="https://www.youtube.com/watch?v=c7OO3qCfH9Y">https://www.youtube.com/watch?v=c7OO3qCfH9Y</a></small>
+						<small><a href="https://www.youtube.com/watch?v=c7OO3qCfH9Y">https://www.youtube.com/watch?v=c7OO3qCfH9Y</a></i></small>
 						<aside class="notes">
 						You can find your presenter notes here (hit »S« on your keyboard).
 						</aside>
@@ -124,21 +98,21 @@
 						<h2 >GEOBIA as conceptual bridge</h2>										
 						<div class="r-stack" style="position:relative; width:1024px; height:768px; margin:0 auto;" >
 						<img class="fragment" data-fragment-index="0" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/03_0_conceptualbridge.png" alt="conceptualbridge" style="position:absolute; top:0; left:0" />
-						<img class="fragment fade-in" data-fragment-index="1" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/03_1_conceptualbridge.png" alt="conceptualbridge" style="position:absolute; top:0; left:0" />
+						<img class="fragment fade-in" data-fragment-index="1" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/03_1_conceptualbridge.png" alt="conceptualbridge" style="position:absolute; top:0; left:0" />	
 						</div>
-
 					</section>
 					
 					<section >
 						<h2>GEOBIA as a new paradigm in image analysis (?) </h2>
-						<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/04_0_GEOBIA.png" alt="GEOBIA"></a>
-						
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/04_0_GEOBIA.png" alt="GEOBIA"></a>
+						<br><citation> © S. Lang</citation>
 					</section>
 					
 					<section >
 						<h2>GEOBIA - trans-application potential</h2>
-						<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/05_0_RGs.png" alt="GEOBIA"></a>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/05_0_RGs.png" alt="GEOBIA" style="position:relative;width:800; height:700px;">
 						<a href="#/EO"> Back to top </a>
+						<citation> © S. Lang, PLUS</citation>
 					</section>
 				</section>
 				
@@ -146,23 +120,30 @@
 				<section id="ImagetoInfo">
 				<section >
 					<h2>GEOBIA - trans-application potential</h2>
-					<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/06_0_RealityModel.png" alt="RealityModel" />			
+					<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/06_0_RealityModel.png" alt="RealityModel" />
+					<br><citation> © S. Lang, PLUS</citation>			
 				</section>
 				
 				<section>
 					<h2> Space over colour? </h2>
-					<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/07_0_spaceovercolor.jpg" alt="space over color" />
+					<figure>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/07_0_spaceovercolor.jpg" alt="space over color" />
+						<figcaption>(© S. Lang, PLUS)</figcaption>	
+					</figure>
 				</section>	
 					
 				<section>
 					<h2> Boundaries in images</h2>
-					<p>Imgage data neither 'contain' nor store boundaries</p>
+					<p>Image data neither 'contain' nor store boundaries</p>
 					<ul>
 						<li style> But boundaries can be extracted from image data by.. </li>
 						<li style> image segmentation techniques</li>
 						<li style> Boundaries occur in several scales and can be used for better image understanding</li>
-					<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/08_0_boundaries.png" width="672" height="454" alt="boundaries" />
-				</section>	
+					<figure>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/08_0_boundaries.png" class="center" width="630" height="425" alt="boundaries" />
+						<figcaption>XXX (© S. Lang, PLUS)</figcaption>
+					</figure>
+					</section>	
 				
 				</section>
 				
@@ -171,16 +152,18 @@
 					<h2>A spatial principle in image analysis</h2>
 					<p><b> Spatial Autocorrelation</b></p>
 					<ul>
-						<li style> Tobler's first law of Geography ("<i>near things are more related than distant ones</i>")</li>
-						<li style> Neighbouring pixels tend to be similar</li>
-						<li style> Boundaries can be detected at discontinuities or gradients</li>
-						<li style> ...</li>
-						<li style> Objects occur on distinct 'levels'; here: levels of parts (eyes, beard, forehead), level of whole (head)</li>
+						<li style="font-size:22px;"> Tobler's first law of Geography ("<i>near things are more related than distant ones</i>")</li>
+						<li style="font-size:22px;"> Neighbouring pixels tend to be similar</li>
+						<li style="font-size:22px;"> Boundaries can be detected at discontinuities or gradients</li>
+						<li style="font-size:22px;"> ...</li>
+						<li style="font-size:22px;"> Objects occur on distinct 'levels'; here: levels of parts (eyes, beard, forehead), level of whole (head)</li>
 					</ul>
-					<div class="r-stack" style="position:relative; width:357px; height:379px; margin:0 auto;" >
+					<figure><div class="r-stack" style="position:relative; width:320px; height:339px; margin:0 auto;" >
 						<img class="fragment fade-out" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/09_0_spatialprincle.png" alt="spatial principle" />
 						<img class="fragment fade-up" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/09_1_spatialprincle.png" alt="spatial principle" style="position:absolute;top:0; left:0"/>
-					</div>
+						<figcaption>XXX (© S. Lang, PLUS)</figcaption>
+					</div></figure>
+						<br>
 				</section>	
 				
 				<section>
@@ -199,10 +182,10 @@
 				<section>
 					<h2>A spatial principle in image analysis...</h2>
 					<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/11_0_varianceRegions.png" alt="varianceRegions" />
-					
+					<br><citation style="text-align:left !important;"> © S. Lang, PLUS</citation>	
 				</section>	
 				
-				</section>
+			</section>
 					
 				<section id="SpatialImageAnalysis">
 					<section>
@@ -246,6 +229,7 @@
 					<div class="r-stack" style="position:relative; top: 50px; left: 240px; width:800px; height:420px; margin:0 auto;" >
 						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/15_0_regions.png" alt="Regions" />
 						</div>
+						<br><citation> © S. Lang, PLUS</citation>
 					</section>
 				
 				<section id="ImageObjects">
@@ -254,6 +238,7 @@
 					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
 						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/16_0_imageObjects.png" alt="imageObjects" />
 						</div>
+						<citation> © S. Lang, PLUS</citation>
 					</section>
 					
 					<section>
@@ -264,6 +249,7 @@
 						<td> <image src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/17_1_ImageObjects.png" alt="image_objects.png" align=left> </td>
 						</tr>
 					</table>
+					<br><citation> © S. Lang, PLUS</citation>
 					</section>
 				</section>
 				
@@ -284,7 +270,9 @@
 					</div>
 					<div class="r-stack" style="position:relative; top: 20px; left: 250px; width:1050px; height:450px; margin:0 auto;" >
 						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/18_0_homogeneity.png" alt="Regions" />		
-						</div>
+						<br><citation> © S. Lang, PLUS</citation>	
+					</div>
+						
 						</section>
 				</section>
 				
@@ -553,6 +541,7 @@
 							</div>
 					</section>
 				
+				<section id="data _to_information">
 					<section>
 						<h2>Data to information </h2>
 						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
@@ -595,6 +584,7 @@
 							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/39_1_information.png" alt="information" />
 							</div>
 					</section>
+				</section>	
 				
 				<section>
 						<h2>Knowledge organising systems (KOS) </h2>
@@ -616,6 +606,7 @@
 							</div>
 					</section>
 					
+				<section id=classification_schemes">
 					<section>
 					<h2>Classification schemes </h2>
 					<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
@@ -667,7 +658,8 @@
 							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/45_0_classificationschemes.png" alt="classification_schemes" />
 							</div><br>
 					</section>
-					
+				</section>	
+
 					<section>
 						<h2>Spectral libraries </h2>
 						<div class="ppt-txt" style="; align: left; position: absolute; top: 100px; left: 0px; height: 150px;  width: 500px">
@@ -728,7 +720,7 @@
 					</section>
 					
 					<section>
-						<h2>Classification schemes </h2>
+						<h2>Class modelling</h2>
 							<div class="r-stack" style="position:relative; top: 30px; left: 0px; width:1000px; height:550px; margin:0 auto;" >
 							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/50_0_classmodelling.png" alt="class_modelling" />
 							</div><br>
