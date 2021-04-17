@@ -18,17 +18,16 @@
 		<meta property="dc:title" content= "Object-based Image Analysis - An Introduction" />
 		<meta property="dc:creator" content="Stefan Lang, University of Salzburg" />
 		<meta property="dc:publisher" content="University of Salzburg" />
-		<meta property="dc:subject" content= "OBIA, image segmentation, EO4GEO, Earth Observation" />
-		<meta property="dc:abstract" content= "These slides provide an introduction to concepts and methods of Object-based image analysis. The slides have been prepared for and used in the virtual GEOBIA summer school in 2020." />
-		<meta property="dc:tableOfContents" content= "(1) What is EO?; 
-							      (2) Benefits of Copernicus; - to be updated" />
+		<meta property="dc:subject" content= "OBIA, image segmentation, EO4GEO, Earth observation" />
+		<meta property="dc:abstract" content= "These slides give an introduction to concepts and methods of object-based image analysis (OBIA). The slides have been prepared for and used in the virtual GEOBIA summer school in 2020." />
+		<meta property="dc:tableOfContents" content= "(1) Why spatial image analysis?; (2) Regions and image objects; (3) Image segmentation; (4) Knowledge representation; (5) Class modelling"  />
 		<meta property="dc:description" content= " " />
 		<meta property="dc:contributor" content= "Eva Missoni, Barbara Hofer, Simon Donike" />
 		<meta property="dc:created" content="2020-08-27" />
 		<meta property="dc:type" content= "teaching material" />
 		<meta property="dc:format" content= "html" />
 		<meta property="dc:language" content= "EN" />
-		<meta property="dc:SizeOrDuration" contnet= "45min" />
+		<meta property="dc:SizeOrDuration" content= "45min" />
 		<meta property="dc:audience" content= "students" />
 		<meta property="dc:educationLevel" content= "EQF 6" />
 		<meta property="dc:source" content= "GEOBIA Summer School Material" />
@@ -38,6 +37,13 @@
 		<link rel="dc:relation" href="eo4geo:IP3-7" />	
 		<link rel="dc:relation" href="eo4geo:IP3" />	
 		<link rel="dc:relation" href="eo4geo:IP3-5" />	
+		<link rel="dc:relation" href="eo4geo:IP3-7-1" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-2" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-3" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-4" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-4-1" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-4-2" />
+		<link rel="dc:relation" href="eo4geo:IP3-7-4-3" />
 		
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
@@ -63,7 +69,7 @@
 				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
 			
 				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
-				 <div  class = "presentation_title" style=" text-align: center " >OBIA - An Introduction</div>	<!--The title of the presentation appears on each slide-->
+				 <div  class = "presentation_title" style=" text-align: center " >Object-based Image Analysis - An Introduction</div>	<!--The title of the presentation appears on each slide-->
 				 
 
 				<div class="slides">
@@ -72,161 +78,174 @@
 				<!-- AUTHORS: DEFINE CONTENT ON YOUR FIRST SLIDE --> 
 				
 				<section >
-					<h1>Object-based Image Analysis (OBIA) - Introduction</h1>
-					Prof. Dr. Stefan LANG <br>
-					Prepared for the GEOBIA Summer School - OBIA for the operational Copernicus service challenge
+					<h1>Object-based Image Analysis (OBIA) - An introductory course</h1>
+					<p>Prof. Dr. Stefan LANG</p> <br>
+					Prepared for the Summer School <i>"OBIA for the operational Copernicus service challenge"</i> [Jun 2020]
 				<!-- AUTHORS: PUT YOUR PRESENTER NOTES HERE: -->
 				<aside class="notes">
-					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+					This course introduces basic concepts of OBIA such as image segmentation, hierarchical representation, class modelling. 
 				</aside>
 				</section>
-				
 				
 			
 				
 				<!-- AUTHORS: DEFINE SECTIONS WITHIN A SECTION TO GET VERTICAL SLIDES:--> 
-				<section id="Intro">
+				<section id="Chapter 1">
 					<section> 
-						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/02_0_space.png" alt="space">	
+						<h1>[1] Why spatial image analysis?</h1>
+						<img width=80% data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/02_0_space.png" alt="space">	
 						<small><a href="https://www.youtube.com/watch?v=c7OO3qCfH9Y">https://www.youtube.com/watch?v=c7OO3qCfH9Y</a></i></small>
+						<figcaption>View from ISS to Earth. Depending on observation distance and resolution we perceive 'objects' in a certain scale. 
+							Here we see the eye of a hurricane. © S. Lang (PLUS) / Photograph: A. Gerst (ESA)</figcaption>
 						<aside class="notes">
-						You can find your presenter notes here (hit »S« on your keyboard).
+						We assume it is a hurricane, even though we cannot be absolutely sure, it could either be a cyclone or taifun. 
+						And we only know the name of the storm ("Katrina?") when we know the acquisition date.
 						</aside>
 					</section>
 					
 					<section >
-						<h2 >GEOBIA as conceptual bridge</h2>										
+						<h2 >Spatial image analysis - bridging remote sensing and GIS</h2>										
 						<div class="r-stack" style="position:relative; width:1024px; height:768px; margin:0 auto;" >
 						<img class="fragment" data-fragment-index="0" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/03_0_conceptualbridge.png" alt="conceptualbridge" style="position:absolute; top:0; left:0" />
 						<img class="fragment fade-in" data-fragment-index="1" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/03_1_conceptualbridge.png" alt="conceptualbridge" style="position:absolute; top:0; left:0" />	
 						</div>
+						<aside class="notes">
+							OBIA bridges concepts from geoinformatics and remote sensing. While the vector model (left) represents geographical objects with crisp boundaries, 
+							the raster model represents pixel brightness as a continous phenomenon (right). © S Lang (PLUS)
+						</aside>
+						
 					</section>
 					
 					<section >
-						<h2>GEOBIA as a new paradigm in image analysis (?) </h2>
-						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/04_0_GEOBIA.png" alt="GEOBIA"></a>
-						<br><citation> © S. Lang</citation>
+						<h2>Geographical OBIA (GEOBIA) as a new paradigm in image analysis </h2>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/04_0_GEOBIA.png" alt="GEOBIA paradigm"></a>
+						<br><figcaption>A growing literature body and a suite of international conference supporting the idea of (GE)OBIA as a 
+							paradigm. © S. Lang (PLUS)</figcaption>
+						
 					</section>
 					
 					<section >
 						<h2>GEOBIA - trans-application potential</h2>
-						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/05_0_RGs.png" alt="GEOBIA" style="position:relative;width:800; height:700px;">
-						<a href="#/EO"> Back to top </a>
-						<citation> © S. Lang, PLUS</citation>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/05_0_appl.png" alt="GEOBIA applications">
+						<br><figcaption>In a variety of application domains, OBIA may be used in bridging between geospatial models and 
+							imaged representations. © S. Lang (PLUS)</figcaption>
 					</section>
-				</section>
+
 				
-				<!-- AUTHORS: INCLUDE AN IMAGE IN YOUR SLIDE: --> 
-				<section id="ImagetoInfo">
-				<section >
-					<h2>GEOBIA - trans-application potential</h2>
-					<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/06_0_RealityModel.png" alt="RealityModel" />
-					<br><citation> © S. Lang, PLUS</citation>			
-				</section>
-				
-				<section>
-					<h2> Space over colour? </h2>
-					<figure>
-						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/07_0_spaceovercolor.jpg" alt="space over color" />
-						<figcaption>© S. Lang, PLUS</figcaption>	
-					</figure>
-				</section>	
+					<section >
+						<h2>GEOBIA provides real-world representations</h2>
+						<img  data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/06_0_RealityModel.png" alt="RealityModel" />
+						<br><figcaption>OBIA mimicking our conceptual understanding of reality, facilitates image understanding and 
+							complex representations of the real-world.  © S. Lang (PLUS)</figcaption>			
+					</section>
+					<section>
 					
-				<section>
-					<h2> Boundaries in images</h2>
-					<p>Image data neither 'contain' nor store boundaries</p>
-					<ul>
-						<li style> But boundaries can be extracted from image data by.. </li>
-						<li style> image segmentation techniques</li>
-						<li style> Boundaries occur in several scales and can be used for better image understanding</li>
-					<figure>
-						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/08_0_boundaries.png" class="center" width="630" height="425" alt="boundaries" />
-						<figcaption>Different spatial information derived from images and other continous datasets (e.g. DEM) (© B. Riedler, S. Lang, PLUS)</figcaption>
-					</figure>
+						<h2> Space over colour? </h2>
+						<p>Spatial properties (structure) are as important as spectral properties (colour) in image analysis</p>
+						<figure>
+							<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/07_0_spaceovercolor.jpg" alt="space over color" />
+							<figcaption>Once structural features make us understand there are agricultural fields shown on an image, 
+								we start exploring the type of fields. © S. Lang (PLUS)</figcaption>	
+						</figure>
+					</section>	
+						
+					<section>
+						<h2> Boundaries in images</h2>
+						Image data neither contain nor store boundaries. <br>However, boundaries can be extracted from image data using 
+							image segmentation techniques. They 'occur' in several scales and can be used for better image understanding.<br>
+						<img data-src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/08_0_boundaries.png" width=70% height=70% alt="boundaries" />
+						<figcaption>Different spatial information derived from images and other continous datasets (e.g. DEM) © B. Riedler, S. Lang (PLUS)</figcaption>
 					</section>	
 				
 				</section>
 				
-				<section id="spatialAutocorr">				
+				<section id="Chapter 2">				
 				<section>
-					<h2>A spatial principle in image analysis</h2>
-					<p><b> Spatial Autocorrelation</b></p>
-					<ul>
-						<li style="font-size:22px;"> Tobler's first law of Geography ("<i>near things are more related than distant ones</i>")</li>
-						<li style="font-size:22px;"> Neighbouring pixels tend to be similar</li>
-						<li style="font-size:22px;"> Boundaries can be detected at discontinuities or gradients</li>
-						<li style="font-size:22px;"> ...</li>
-						<li style="font-size:22px;"> Objects occur on distinct 'levels'; here: levels of parts (eyes, beard, forehead), level of whole (head)</li>
-					</ul>
-					<figure><div class="r-stack" style="position:relative; width:320px; height:339px; margin:0 auto;" >
+					<h1>Regions and image objects</h1>
+					<h2>Spatial auto-correlation</h2>
+					According to Tobler's First Law of Geography, which states that "<i>near things are more related than distant ones</i>"), neighbouring pixels 
+					tend to be similar. Boundaries can be detected at discontinuities or gradients between these groups of similar pixels. Boundaries 
+					form objects on distinct levels (scales)</li>
+			
+					<div class="r-stack" style="position:relative; width:320px; height:339px; margin:0 auto;" >
 						<img class="fragment fade-out" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/09_0_spatialprincle.png" alt="spatial principle" />
 						<img class="fragment fade-up" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/09_1_spatialprincle.png" alt="spatial principle" style="position:absolute;top:0; left:0"/>
-						<figcaption>XXX (© S. Lang, PLUS)</figcaption>
-					</div></figure>
-						<br>
+						<figcaption>A simple image matrix is converted to random colours (left). When using graduated grey shades it reveals a familiar pattern (right). © S. Lang, PLUS</figcaption>
+					</div>
+					<aside class="notes">
+						Once recognizing a human head with a face, we instantly perceive different levels: the level of the parts (eyes, beard, forehead), level of the whole (head).
+					</aside>
+					
 				</section>	
 				
 				<section>
-					<h2>A spatial principle in image analysis...</h2>
-					
-					<ul>
-						<li style> <i>Without</i> spatial autocorrelation the number of grouping options would be arbitrary and +/- infinite</li>
-						<li style> <i>With</i> spatial autocorrelation it becomes a matter of optimisation and ambivalence ('ill-posed')</li>
-					</ul>
-					<div class="r-stack" style="position:relative; width:500px; height:220px; margin:0 auto;" >
+					<h2>Spatial auto-correlation and grouping</h2>
+					Spatial auto-correlation is a key spatial principle in image analysis. We rely on this principle when grouping pixels according to their similarity.
+					Without spatial autocorrelation the number of grouping options would be arbitrary. However, there is also ambiguity in the grouping process.
+				
+					<div class="r-stack" style="position:relative; margin:0 auto;" >
 					<figure>
 						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/10_0_samesimilar.png" alt="samesimilar" />
-						<figcaption>© S. Lang, PLUS</figcaption>
+						<figcaption>Using spatial autocorrelation neighboring pixels can be grouped. It is, however, a matter of optimisation and ambivalence ('ill-posed'). © S. Lang, PLUS</figcaption>
 					</figure>
-						<img class="fragment fade-up" src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/10_1_samesimilar.png" alt="samesimilar" />
+						
 					</div>
+					<aside class="notes">
+						It is not about grouping the same values, but grouping similar values. But how can we determine similarity? We will see that similarity corresponds to 
+						homogeneity (of regions), a fundamental principle of image segmentation.
+					</aside>
+					
 				</section>	
 				
 				<section>
-					<h2>A spatial principle in image analysis...</h2>
+					<h2>Spatial auto-correlation and boundaries</h2>
 					<figure>
 						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/11_0_varianceRegions.png" alt="varianceRegions" />
-						<figcaption>© S. Lang, PLUS</figcaption>
+						<figcaption>Despite the similarity of neighbouring pixels, we eventually encounter gradients. Those gradients we can identify as boundaries. © S. Lang, PLUS</figcaption>
 					</figure>
 				</section>	
 				
-			</section>
-					
-				<section id="SpatialImageAnalysis">
-					<section>
-						<h2>Spatial Image Analysis </h2>
-						<strong> Extended set of target classes: </strong>
-						<li style> Geometrically defined classes </li>
-						<li style> Composite classes / objects </li>
-						<figure>
-							<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
-							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/12_0_spatialImageAnalysis.png" alt="spatialImageAnalysis" />
-							<figcaption>© S. Lang, D.Tiede (PLUS)</figcaption>
-							</div>
-						</figure>
-					</section>	
-				
-					<section>
-						<h2>Spatial Image Analysis </h2>
-						<figure>
-							<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
-							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/13_0_Chiemsee.png" alt="Chiemsee" />
-							<figcaption>© D. Tiede (PLUS)</figcaption>
-						</div>
-						</figure>
-					</section>
-				
-					<section>
-						<h2>Spatial Image Analysis </h2>
-						Spatial (i.e. geometrical, textural and contextual) aspects that can be addressed, even on grey-scale image
-						<figure>
-							<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
-							<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/14_0_spatialAspects.png" alt="spatialAspects" />
-						<figcaption>XXX (© )</figcaption>
-						</div>
-						</figure>
-					</section>
+	
+				<section>
+					<h2>Real-world objects on images </h2>
+					<figure>
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/13_0_Chiemsee.png" alt="Chiemsee" />
+						<figcaption>Real-world features can be characterised by spatial properties and spatial relations. © D. Tiede (PLUS)</figcaption>
+					</div>
+					</figure>
+					<aside class="notes">
+						Rivers and lakes have similar spectral behaviour but different spatial features (compact vs. elongated). Islands can appear in many different 
+						ways, but are surrounded by water bodies.
+					</aside>
 				</section>
+				
+				<section>
+					<h2>Spatial properties of objects</h2>
+					
+					<figure>
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/14_0_spatialAspects.png" alt="spatialAspects" />
+					<figcaption>Spatial (i.e. geometrical, textural and contextual) aspects that can be addressed, even on grey-scale image. © S. Lang, PLUS</figcaption>
+					</div>
+					</figure>
+				</section>
+
+				<section>
+					<h2>Extended set of target classes in spatial image analysis </h2>
+					OBIA enables to address target classes, which are defined spatially. There are basically two groups, namely <b>geometrically defined classes</b>
+					(e.g. lake vs. river) and <b>spatio-relational classes</b> (e.g. an island, an urban park, or composite objects such as a residential area)
+
+					<figure>
+						<div class="r-stack" style="position:relative; width:1000px; height:440px; margin:0 auto;" >
+						<img src="https://eo4geo.sbg.ac.at/PLUS/OBIA_Intro/12_0_spatialImageAnalysis.png" alt="spatialImageAnalysis" />
+						<figcaption>OBIA expands the set of target classes as compared to pixel-based analysis. Geometric or spatio-relational classes
+							can be derived. © S. Lang, D.Tiede (PLUS)</figcaption>
+						</div>
+					</figure>
+				</section>	
+
+			</section>
 				
 				
 					<section>
