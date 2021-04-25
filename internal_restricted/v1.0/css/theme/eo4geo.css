@@ -152,7 +152,8 @@ top:0;
 .reveal p {
   margin: 20px 0;
   line-height: 1.3;
-  text-align: center;  }
+  text-align: center;  
+  font-family: 'Open Sans', sans-serif; }
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
